@@ -27,7 +27,7 @@ public class ApApplication {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
 
-				registry.addMapping("/**").allowedOrigins("https://argentinaprograma-9a060.web.app/");
+				registry.addMapping("/**").allowedOrigins("*");
 			}
 		};
 	}
@@ -35,7 +35,7 @@ public class ApApplication {
 	public CorsFilter corsFilter() {
 		CorsConfiguration corsConfiguration = new CorsConfiguration();
 		corsConfiguration.setAllowCredentials(true);
-		corsConfiguration.setAllowedOriginPatterns(Arrays.asList("https://argentinaprograma-9a060.web.app/"));
+		corsConfiguration.setAllowedOriginPatterns(Arrays.asList("*"));
 
 		corsConfiguration.setAllowedHeaders(Arrays.asList("Origin", "Access-Control-Allow-Origin", "Content-Type",
 				"Accept", "Authorization", "Origin, Accept", "X-Requested-With",
