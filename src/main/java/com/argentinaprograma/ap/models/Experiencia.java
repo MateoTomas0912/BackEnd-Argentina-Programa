@@ -8,7 +8,6 @@ import javax.persistence.Id;
 @Entity
 public class Experiencia {
     @Id
-    @GeneratedValue(strategy =  GenerationType.AUTO)
     private Long idExp;
     private String TituloExp;
     private int fechaExp;
