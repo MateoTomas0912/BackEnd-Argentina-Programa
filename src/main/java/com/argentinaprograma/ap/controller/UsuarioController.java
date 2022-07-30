@@ -18,7 +18,7 @@ public class UsuarioController {
 
     @GetMapping("/id/{id}")
     public ResponseEntity<Usuario> obtenerUsuario(@PathVariable("id") Long id){
-        Usuario usuario=usuarioService.buscarUsuarioPorId(id);
+        Usuario usuario =usuarioService.buscarUsuarioPorId(id);
         return new ResponseEntity<>(usuario, HttpStatus.OK);
     }
 

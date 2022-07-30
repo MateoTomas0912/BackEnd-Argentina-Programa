@@ -1,9 +1,7 @@
 package com.argentinaprograma.ap.controller;
 
 import com.argentinaprograma.ap.models.Educacion;
-import com.argentinaprograma.ap.models.Usuario;
 import com.argentinaprograma.ap.services.EducacionService;
-import com.argentinaprograma.ap.services.UsuarioService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -26,7 +24,7 @@ public class EducacionController {
     }
 
     @PutMapping("/update")
-    public ResponseEntity<Educacion> editarExperiencia(@RequestBody Educacion educacion){
+    public ResponseEntity<Educacion> editarEducacion(@RequestBody Educacion educacion){
         Educacion updateEducacion = educacionService.editarEducacion(educacion);
         return new ResponseEntity<>(updateEducacion, HttpStatus.OK);
     }
