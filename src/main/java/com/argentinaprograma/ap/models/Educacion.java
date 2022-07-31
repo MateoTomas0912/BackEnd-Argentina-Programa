@@ -8,6 +8,7 @@ import javax.persistence.Id;
 @Entity
 public class Educacion {
     @Id
+    @GeneratedValue (strategy = GenerationType.AUTO)
     private Long idEdu;
     private String TituloEdu;
     private int fechaEdu;
